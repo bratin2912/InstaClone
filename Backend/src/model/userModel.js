@@ -5,10 +5,11 @@ const userSchema=new mongoose.Schema({
     author:String,
     location:String,
     description:String,
-    // date:{
-    //     type:new Date(),
-    //     default:true
-    // }
+    likes:Number,
+    postedAt: { 
+        type: String,
+        default: () => new Date().toString().split('T')[0]
+    }
 });
 
 const user=mongoose.model("user",userSchema);
