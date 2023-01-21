@@ -1,0 +1,21 @@
+#heading_div{
+    top: 385px;
+left: 1126px;
+width: 351px;
+height: 85px;
+}
+
+h1{
+    text-align: left;
+font: normal normal normal 64px/85px Palatino;
+letter-spacing: 0px;
+color: #006238;
+opacity: 1;
+}
+
+#container{
+    top: 0px;
+left: 0px;
+width: 1920px;
+height: 1080px;
+}
