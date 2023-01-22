@@ -1,0 +1,75 @@
+#main_viewPage {
+    margin-top: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 460px;
+    width: 500px;
+    padding: 5px;
+    padding-bottom: 0px;
+    /* margin-bottom: 10px; */
+    margin-left: 30%;
+}
+/* name icon section*/
+#name_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+#name_view {
+    margin: 0px;
+}
+/* adress section */
+#location_view {
+    margin: 0px;
+}
+/* image section */
+#img_view {
+    height: 300px;
+    width: 500 px;
+    /* border: 1px solid black; */
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8
+}
+/* like share section */
+#like_share {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+}
+#like {
+    margin-top: 10px;
+    height: 30px;
+}
+#sharebtn {
+    margin-left: 15px;
+    margin-top: 10px;
+    height: 30px;
+}
+#date {
+    margin-left: 60%;
+}
+#likeCount {
+    margin: 0px;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+#description_view {
+    margin-top: 8px;
+    padding: 0px;
+    margin-left: 5px;
+}
+#img_view img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
