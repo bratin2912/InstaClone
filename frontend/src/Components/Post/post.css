@@ -1,0 +1,23 @@
+.post_container {
+    /* height: 170px;
+    width: 300px;
+    border: 2px solid black;
+    box-shadow: none;
+    margin: 100px 0px 0px 360px;
+    padding: 20px;
+    border-radius: 2px; */
+    margin: auto;
+    margin-top: 5%;
+    width: 30%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 3px;
+}
+#post_address{
+    margin-left: 50px;
+}
+#post_btn{
+    margin-left: 45%;
+    padding-left: 5px;
+    padding-right:5px ;
+}
