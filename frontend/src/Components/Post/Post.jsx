@@ -1,16 +1,16 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import "../Post/post.css"
-// import Navbar from '../Navbar/navbar';
 const Post = () => {
+    const navigate=useNavigate()
     const [username, setUsername] = useState('')
     const [address, setAddress] = useState('')
     const [imageFile, setImageFile] = useState('');
     const [description, setDescritpion] = useState("");
 
-    const uploadPost = () => {
+    const uploadPost = async() => {
         const formData = new FormData();
         // Map => takes the data in the key value format 
         formData.append("author", username)
@@ -18,10 +18,11 @@ const Post = () => {
         formData.append("image_file", imageFile)
         formData.append("description", description)
 
-        fetch("http://localhost:8000/user", {
+        await fetch("https://7256-2405-201-9009-70d2-55a0-34c2-7b42-f47d.in.ngrok.io/user",{
             method: 'POST',
             body: formData
         })
+        navigate('/postview');
     }
 
     return (
@@ -42,7 +43,7 @@ const Post = () => {
                 <div>
                     <textarea value={description} placeholder="Description" onChange={(e) => setDescritpion(e.target.value)}></textarea>
                 </div>
-                <Link to="/postview"><button onClick={uploadPost} id="post_btn">Post</button></Link>
+                <button onClick={uploadPost} id="post_btn">Post</button>
             </div>
         </>
     );

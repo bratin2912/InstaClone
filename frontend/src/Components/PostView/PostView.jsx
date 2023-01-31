@@ -7,7 +7,7 @@ import "../PostView/postview.css";
 const PostView = () => {
     const [data, setData] = useState(null)
     const fetchApi = async () => {
-        const res = await fetch("http://localhost:8000/user");
+        const res = await fetch("https://insta-bratin.onrender.com/user");
         setData(await res.json());
     }
     useEffect(() => {
@@ -18,7 +18,6 @@ const PostView = () => {
             <h1>Loading..</h1>
         )
     }
-    console.log(data?.result)
     return (
         <>
             <Navbar />
@@ -26,7 +25,6 @@ const PostView = () => {
                 {data.result.map((ele) => {
                     const date=ele.postedAt.split(" ");
                     console.log(ele.file_name)
-                    debugger
                     return (
                         <div id="main_viewPage" key={ele._id}>
                             <div id="name_icon">
@@ -35,7 +33,7 @@ const PostView = () => {
                             </div>
                             <p id="location_view">{ele.location}</p>
                             <div id="img_view">
-                                <img src={`http://localhost:8000/user/image/${ele.file_name}`} alt="A beautiful scenery" />
+                                <img src={`${ele.url}`} alt="A beautiful scenery" />
                             </div>
                             <div id="like_share">
                                 <img src={heart} alt="heart" id="like" />
